@@ -1,6 +1,6 @@
 const Sidebar = () => {
     return (
-        <div className="w-72 bg-white border-r border-gray-200 p-6 flex flex-col gap-8">
+        <div className="fixed left-0 top-0 h-screen w-72 bg-white border-r border-gray-200 p-6 flex flex-col gap-8 overflow-y-auto z-50">
             <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center text-white font-bold text-xl">
                     D

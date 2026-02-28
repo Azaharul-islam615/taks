@@ -3,7 +3,8 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router'
 import Login from './pages/Login'
-import Dashboard from './pages/Dashboard'
+import MainLayout from './Layout/MainLayout'
+import DashboardContent from './pages/DashboardContent'
 
 const ProtectedRoute = ({ children }) => {
   const isLoggedIn = localStorage.getItem('isLoggedIn');
@@ -20,12 +21,18 @@ const router = createBrowserRouter([
     element: <Login />
   },
   {
-    path: "/dashboard",
+    path: "/",
     element: (
       <ProtectedRoute>
-        <Dashboard />
+        <MainLayout />
       </ProtectedRoute>
-    )
+    ),
+    children: [
+      {
+        path: "dashboard",
+        element: <DashboardContent />
+      }
+    ]
   }
 ]);
 
