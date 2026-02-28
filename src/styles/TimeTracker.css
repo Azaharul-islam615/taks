@@ -1,0 +1,59 @@
+.time-tracker {
+  grid-column: span 1;
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+}
+
+.time-tracker h3 {
+  color: white;
+  align-self: flex-start;
+}
+
+.timer-display {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 2rem 0;
+  font-family: 'Courier New', monospace;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.control-btn {
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-btn.pause {
+  background: white;
+  color: #1f2937;
+}
+
+.control-btn.pause:hover {
+  transform: scale(1.1);
+}
+
+.control-btn.stop {
+  background: #ef4444;
+  color: white;
+}
+
+.control-btn.stop:hover {
+  background: #dc2626;
+  transform: scale(1.1);
+}
